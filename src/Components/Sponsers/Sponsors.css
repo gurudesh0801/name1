@@ -1,0 +1,66 @@
+/* General Container Styling */
+.sponsor-logos {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.sponsor-logos h1 {
+  font-size: 3rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px; /* Ensures consistent spacing between logos */
+}
+
+/* Individual Logo Item */
+.logo-item {
+  flex: 1 1 calc(10% - 20px); /* Allows flexible width for scaling */
+  max-width: 150px; /* Default max size */
+  height: auto; /* Makes the height responsive */
+  aspect-ratio: 1 / 1; /* Keeps items square */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(206, 128, 247, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.logo-item:hover {
+  transform: scale(1.05);
+}
+
+/* Logo Image */
+.logo-item img {
+  width: 80%; /* Responsive image scaling */
+  height: 80%;
+  object-fit: contain;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .logo-item {
+    flex: 1 1 calc(20% - 20px); /* Adjusts size on medium screens */
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-item {
+    flex: 1 1 calc(30% - 20px); /* Adjusts size on smaller screens */
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-item {
+    flex: 1 1 calc(45% - 10px); /* Adjusts size on extra small screens */
+    max-width: 80px;
+  }
+}
